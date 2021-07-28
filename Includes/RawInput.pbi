@@ -5,7 +5,7 @@
 ;       Author: Herwin Bozet
 ;
 ; ==- Compatibility -=============================
-;  Compiler version: PureBasic 5.70 (x86/x64)
+;  Compiler version: PureBasic 5.70 (x64)
 ;  Operating system: Windows 10 21H1 (Previous versions untested)
 ; 
 ; ==- Sources -===================================
@@ -13,13 +13,15 @@
 ; 
 ; ==- Links & License -===========================
 ;  License: Unlicense
-;  GitHub: ???
+;  GitHub: https://github.com/aziascreations/PB-RawInput
 ;}
 
 ;- Notes
 
 ; Windows may combine some devices into so-called "virtual devices"
 ; https://stackoverflow.com/a/10331763/4135541
+
+; FIXME: Not tested on X86 !
 
 
 ;- Compiler Directives

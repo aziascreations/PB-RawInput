@@ -4,7 +4,7 @@
 ;       Author: Herwin Bozet
 ;
 ; ==- Compatibility -=============================
-;  Compiler version: PureBasic 5.70 (x86/x64)
+;  Compiler version: PureBasic 5.70 (x64)
 ;  Operating system: Windows 10 21H1 (Previous versions untested)
 ; 
 ; ==- Sources -===================================
@@ -12,7 +12,7 @@
 ; 
 ; ==- Links & License -===========================
 ;  License: Unlicense
-;  GitHub: ???
+;  GitHub: https://github.com/aziascreations/PB-RawInput
 ;}
 
 ;- Notes
