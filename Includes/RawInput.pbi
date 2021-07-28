@@ -1,7 +1,7 @@
 ﻿;{- Code Header
 ; ==- Basic Info -================================
 ;         Name: RawInput.pbi
-;      Version: 1.0.0
+;      Version: 1.0.1
 ;       Author: Herwin Bozet
 ;
 ; ==- Compatibility -=============================
@@ -41,9 +41,9 @@ DeclareModule RawInput
 	
 	#Version_Major = 1
 	#Version_Minor = 0
-	#Version_Patch = 0
+	#Version_Patch = 1
 	#Version_Label$ = ""
-	#Version$ = "1.0.0";+"-"+#Version_Label$
+	#Version$ = "1.0.1";+"-"+#Version_Label$
 	
 	
 	;-> Library Path Declaration
@@ -177,7 +177,7 @@ DeclareModule RawInput
 	
 	; https://docs.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-rid_device_info_keyboard
 	Structure tagRID_DEVICE_INFO_KEYBOARD Align #PB_Structure_AlignC
-		dwTyp.WinTypes::DWORD
+		dwType.WinTypes::DWORD
 		dwSubType.WinTypes::DWORD
 		dwKeyboardMode.WinTypes::DWORD
 		dwNumberOfFunctionKeys.WinTypes::DWORD
@@ -298,9 +298,17 @@ DeclareModule RawInput
 	; see the documentation in kbd.h, ntdd8042.h and ntddkbd.h headers in Windows SDK, and the Keyboard Layout Samples.
 	
 	; The bitfield of the mouse device identification properties (tagRID_DEVICE_INFO_MOUSE\dwId)
-	#MOUSE_HID_HARDWARE = $0080 ; HID mouse
-	#WHEELMOUSE_HID_HARDWARE = $0100 ; HID wheel mouse
-	#HORIZONTAL_WHEEL_PRESENT = $8000; Mouse with horizontal wheel
+	; Some "undocummented" constants were gotten from: https://github.com/tpn/winsdk-10/blob/master/Include/10.0.16299.0/shared/ntddmou.h
+	#MOUSE_INPORT_HARDWARE      = $0001
+	#MOUSE_I8042_HARDWARE       = $0002
+	#MOUSE_SERIAL_HARDWARE      = $0004
+	#BALLPOINT_I8042_HARDWARE   = $0008
+	#BALLPOINT_SERIAL_HARDWARE  = $0010
+	#WHEELMOUSE_I8042_HARDWARE  = $0020
+	#WHEELMOUSE_SERIAL_HARDWARE = $0040
+	#MOUSE_HID_HARDWARE         = $0080 ; HID mouse
+	#WHEELMOUSE_HID_HARDWARE    = $0100 ; HID wheel mouse
+	#HORIZONTAL_WHEEL_PRESENT   = $8000 ; Mouse with horizontal wheel
 	
 	
 	;-> Remaining Type Macros
